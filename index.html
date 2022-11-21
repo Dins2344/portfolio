@@ -423,25 +423,23 @@
                     <!-- Contact Form -->
                     <form id="submit-form" action="" novalidate onsubmit="return valiform()">
                         <div class="form-group">
-                            <input type="text" class="form-control-input" name="name" id="fname" >
+                            <input type="text" class="form-control-input" name="name" id="fname" placeholder="Name" >
+                            <small class="text-danger">
+                            </small>
+                            
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control-input" name="email" id="lemail" placeholder="Email" >
+                            <small class="text-danger">
+                            </small>
+                            
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control-textarea" name="message" id="subject" placeholder="Message"></textarea>
                             <small class="text-danger">
 
                             </small>
-                            <label class="label-control" for="fname">Name</label>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control-input" name="email" id="lemail" >
-                            <small class="text-danger">
-                                
-                            </small>
-                            <label class="label-control" for="lemail">Email</label>
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control-textarea" name="message" id="subject" ></textarea>
-                            <small class="text-danger">
-
-                            </small>
-                            <label class="label-control" for="subject">Project details</label>
+                            
                         </div>
                         <div class="form-group">
                             <button type="submit" id="ssubmit" class="form-control-submit-button">Submit</button>
