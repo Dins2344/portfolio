@@ -82,9 +82,7 @@ const isBetween = (length, min, max) => length < min || length > max ? false : t
 const showError = (input, message) => {
     // get the form-field element
     const formField = input.parentElement;
-    // add the error class
-    formField.classList.remove('success');
-    formField.classList.add('error');
+
 
     // show the error message
     const error = formField.querySelector('small');
@@ -94,10 +92,6 @@ const showError = (input, message) => {
 const showSuccess = (input) => {
     // get the form-field element
     const formField = input.parentElement;
-
-    // remove the error class
-    formField.classList.remove('error');
-    formField.classList.add('success');
 
     // hide the error message
     const error = formField.querySelector('small');
@@ -144,26 +138,14 @@ form.addEventListener('submit', function (e) {
 });
 
 
-const debounce = (fn, delay = 500) => {
-    let timeoutId;
-    return (...args) => {
-        // cancel the previous timer
-        if (timeoutId) {
-            clearTimeout(timeoutId);
-        }
-        // setup a new timer
-        timeoutId = setTimeout(() => {
-            fn.apply(null, args)
-        }, delay);
-    };
-};
 
-form.addEventListener('input', debounce(function (e) {
+
+form.addEventListener('input',function (e) {
     switch (e.target.id) {
-        case 'username':
+        case 'fname':
             checkUsername();
             break;
-        case 'email':
+        case 'lemail':
             checkEmail();
             break;
         case 'subject':
@@ -171,4 +153,4 @@ form.addEventListener('input', debounce(function (e) {
             break;
         
     }
-}));
+});
